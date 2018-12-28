@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <title>Splurty2018</title>
     <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column h-100">
     <header class="row">
       <div class="col-3">
         <div class="circle">
@@ -34,7 +34,13 @@
 
     <br class="clear" />
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      This is the footer!
+    </footer>
 
   </body>
 </html>
